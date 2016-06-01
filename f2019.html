@@ -1,1 +1,77 @@
-<head><meta charset=UTF-8><meta name=description content="Потерянный пакет с рынка ями-ичи"><meta name=keywords content=сайты,дизайн,дизайн-студия,ями-ичи,пакет,svg,canvas,web,digital,publication,design><meta name=twitter:card value=summary><meta property=og:url content=http://pack.ga/ ><meta property=og:type content=website><meta property=og:image content=http://pack.ga/ogimage.jpg><meta property=og:title content="dark package"><meta property=og:description content="Потерянный пакет с полочки undefined"><title>dark package</title><link rel=stylesheet type=text/css href=style.css><script type=text/javascript src=all.min.js></script></head><body><script type=text/javascript>(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter37031375 = new Ya.Metrika({ id:37031375, clickmap:true, trackLinks:true, accurateTrackBounce:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src=https://mc.yandex.ru/watch/37031375 style="position:absolute; left:-9999px" alt=""></div></noscript><p>точка</p></body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>A Pen by  Arseniy</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        color: #ccc;
+        -webkit-animation: ahah 1000s;
+                animation: ahah 1000s;
+      }
+      #e {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        left: 0;
+        background: #f00;
+        border-radius: 50%;
+      }
+      @-webkit-keyframes ahah {
+        from {
+          background: #fff;
+        }
+        to {
+          background: #f00;
+        }
+      }
+      @keyframes ahah {
+        from {
+          background: #fff;
+        }
+        to {
+          background: #f00;
+        }
+      }
+    </style>
+  </head>
+  <body>
+<div id="e"></div>
+<h2>следи за красным кругом</h2>
+  <script>
+        var e = document.getElementById('e');
+        function gc() {
+          return [Math.floor(Math.random() * window.innerWidth), Math.floor(Math.random() * window.innerHeight)];
+        }
+        var i = 0,
+          coors = [0, 0], oldcoors = [0,0];
+        setInterval(function() {
+          if (i < 1) {
+            i += 0.05;
+          } else {
+            i = 0;
+            oldcoors = coors;
+            coors = gc();
+          }
+          e.style.left = (coors[0] * i) + (oldcoors[0]*(1-i)) + 'px';
+          e.style.top = (coors[1] * i) + (oldcoors[1]*(1-i)) + 'px';
+        }, 60)
+    </script>
+  </body>
+</html>
